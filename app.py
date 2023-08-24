@@ -30,5 +30,3 @@ def uninstall_package(package):
    os.system(f'pip uninstall -y {package}')
    return f"Uninstalled {package}"
 
-if __name__ == '__main__':
-    app.run()
