@@ -15,6 +15,10 @@ The API will enable users to send a DELETE request with package information, res
 **List Installed Packages:**
 Users can send a GET request to the API, and in response, they will receive a list of all currently installed pip packages in their environment. This information is retrieved directly from the environment without the need for command-line interaction.
 <br>
+**Search Packages:(Updated Version)**
+Users can send a request to the API for details of a package, it will return the url redirecting to the offical PIP website with details like description, Version History, How to use etc for the searched package.
+<br>
+<br>
 User-Friendly Interface:
 The API will be designed with a user-friendly and intuitive interface, making it accessible even to those without extensive technical knowledge. Clear API endpoints and well-documented usage instructions will guide users through the process.
 <br>
@@ -25,7 +29,7 @@ The API will be designed with a user-friendly and intuitive interface, making it
 **Python**: Using Python as the primary programming language for developing the API logic.<br>
 **Pip**: Leveraging the pip package manager to handle package installation and uninstallation.<br>
 **RESTful API Design**: Implementing a RESTful architecture to ensure consistent and predictable interactions with the API.<br>
-**JSON**: Communicating with the API using JSON data format for request and response payloads.
+
 
 <br>
 <br>
@@ -54,3 +58,6 @@ API retrieves the list of installed packages from the environment using the pip 
 
 
 **Live Demo Link** : http://pipapi-u6jn.onrender.com/
+
+**version update**
+Added a new feature to search about a PIP package. 
