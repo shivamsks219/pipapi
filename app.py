@@ -19,6 +19,11 @@ def show_all_package():
    res = res.replace('\n', '<br>')
    return res
 
+@app.route('/search/<package>')
+def search_package(package):
+   url = "https://pypi.org/project/"
+   url += f'{package}'
+   return redirect(url, code=302)
 
 @app.route('/install/<package>')
 def install_package(package):
