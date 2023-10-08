@@ -16,9 +16,17 @@ def show_all_package():
    process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE,shell=True)
    result , error = process.communicate()
    res = str(result, 'UTF-8')
-   print(res)
-   res = res.replace('\n', '<br>')
-   return res
+   res_lines = res.split('\n')
+	package_dict = {}
+
+	for line in res_lines[2:]:  # Skip the first two lines (header)
+		if line:
+			parts = line.split()
+			package_name = parts[0]
+			version = parts[1]
+			package_dict[package_name] = version
+
+	return json.dumps(package_dict, indent=4)
 
 #This endpoint enable user to install a package 
 @app.route('/install/<package>')
