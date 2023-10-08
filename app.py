@@ -21,12 +21,12 @@ def show_all_package():
 
    for line in res_lines[2:]:  # Skip the first two lines (header)
       if line:
-	 parts = line.split()
-	 package_name = parts[0]
-	 version = parts[1]
-	 package_dict[package_name] = version
+         parts = line.split()
+         package_name = parts[0]
+         version = parts[1]
+         package_dict[package_name] = version
 
-    return json.dumps(package_dict, indent=4)
+   return json.dumps(package_dict, indent=4)
 
 #This endpoint enable user to install a package 
 @app.route('/install/<package>')
